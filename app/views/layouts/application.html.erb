@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			<a href="#" class="brand">Loop</a>
+			<ul class="nav">
+				<li><%= link_to "News Feed", statuses_path %></li>
+			</div>
+		</div>	
+	</div>
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+		<br />
+		<h6>Disclaimer: Work In Progress - Showing this to others will produce Wallace like Karma for up to 5 years.</h6>
+	</div>
 
 </body>
 </html>
