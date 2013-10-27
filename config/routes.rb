@@ -1,4 +1,6 @@
 Treebook::Application.routes.draw do
+  get "profiles/show"
+
   devise_for :users
 
 devise_scope :user do
@@ -10,6 +12,8 @@ end
   resources :statuses
   get 'newsfeed', to: 'statuses#index', as: :newsfeed
   root to: 'statuses#index'
+
+  get '/:id', to: 'profiles#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
